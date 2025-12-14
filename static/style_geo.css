@@ -1,0 +1,122 @@
+/* Styling for GeoCities-esque web-pages*/
+
+:root {
+    /* <!-- Custom Cursors --> */
+    --cursor-pointer: url(../img/nscape/pointer.cur), pointer;
+    --cursor-grab: url(../img/nscape/grab.cur), grab;
+    --cursor-grabbing: url(../img/nscape/grabbing.cur), grabbing;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    height: 100%;
+    max-width: 100%;
+    justify-self: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+main {
+    max-width: 1280px;
+}
+
+.grid-wrapper {
+    display: grid;
+    /* Two smaller columns, larger middle column */
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.full {
+    /* Span all columns */
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.half {
+    max-width: 50%;
+}
+
+.center {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.center-content {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-section {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    background: linear-gradient(0deg, #ffffff 0%, #ffffffb8 95%, #ffffff00 100%);
+    color: black;
+    margin: 0px;
+    padding: 1.5em;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Link styles */
+a:link {
+    color: #00a2ff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0059e1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00a2ff;
+    text-decoration: underline;
+    cursor: var(--cursor-pointer);
+}
+
+a:active {
+    color: #0059e1;
+    text-decoration: none;
+}
+
+/* Media */
+@media (max-width: 900px) {
+    body {
+        text-align: center;
+        overflow: scroll;
+    }
+    main {
+        max-width: 100%;
+    }
+    .full {
+        grid-column: unset;
+    }
+    .grid-wrapper {
+        align-content: center;
+        grid-template-columns: 1fr;
+    }
+    .info-section {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* @media (grid: 0) {
+    .grid-wrapper {
+        align-content: center;
+        grid-template-columns: 1fr;
+    }
+    aside {
+        display: none;
+    }    
+} */

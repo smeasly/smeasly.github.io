@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neoscape Navigator</title>
+    <link rel="stylesheet" href="static/style_nscape.css">
+    <link rel="icon" type="image/png" href="img/nscape/icon.ico">
+    <style>
+        noscript * {
+            color: white;
+            background-color: blue;
+            line-height: 1em;
+        }
+
+        #viewport {
+            max-width: 100%;
+            max-height: max-content;
+            overflow: hidden
+        }
+        
+        #web-iframe {
+            display: block;
+            border: none;
+            margin: 0px;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        #clock {
+            font-family: 'Courier New', monospace;
+            max-width: fit-content;
+        }
+
+        .titlefield {
+            max-width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="browser-window">
+        <!-- Win95 Window -->
+        <header class="title-bar">
+            <!-- Window title area -->
+            <div class="title-left">
+                <img src="img/nscape/icon.ico" alt="Netscape Icon" style="height: 24px;">
+                <span style="margin-left: 4px;">
+                    <span class="titlefield">Your Website</span> - Neoscape Navigator
+                </span>
+            </div>
+            <!-- Window controls -->
+            <div class="title-right">
+                <button class="border-button" onclick="javascript:window.location.href = document.getElementById('web-iframe').contentWindow.location.href;">&#x1F5D5;</button>
+                <button style="margin-left: 1px;" class="border-button" onclick="javascript:window.location.href = document.getElementById('web-iframe').contentWindow.location.href;">&#x1F5D7;</button>
+                <button style="margin-left: 4px;" class="border-button" onclick="javascript:window.location.href = document.getElementById('web-iframe').contentWindow.location.href;">&#x1F5D9;</button>
+            </div>
+
+        </header>
+
+        <!-- Internal program UI controls - just for show mostly :) -->
+        <nav>
+            <div class="menu-bar">
+                <!-- <div class="dropdown"> -->
+                <button><u>F</u>ile</button>
+                    <!-- <div class="dropdown-content">Open</div>
+                    <div class="dropdown-content">Save</div>
+                </div> -->
+                <button><u>E</u>dit</button>
+                <button><u>V</u>iew</button>
+                <button><u>G</u>o</button>
+                <!-- <button><u>B</u>ookmarks</button>
+                <button><u>O</u>ptions</button>
+                <button onclick="javascript:window.location.href = '/';"><u>D</u>irectory</button> -->
+                <button><u>W</u>indow</button>
+                <button><u>H</u>elp</button>
+            </div>
+            <div class="ribbon-bar">
+                <!-- Ribbon controls -->
+                <div>
+                    <button class="border-button" onclick="javascript:history.back()" title="Go from whence you came">Back</button>
+                    <button class="border-button" onclick="javascript:history.forward()" title="Return to the page you came back from">Forward</button>
+                    <button class="border-button" onclick="javascript:window.location.reload();" title="Not loading properly? Refresh the page.">Reload</button>
+                    <button class="border-button" onclick="javascript:window.location.href = 'index.html';" title="Go back to the present (index page)">Home</button>
+                    <!-- <span>&NonBreakingSpace;</span> -->
+                    <!-- <span>&NonBreakingSpace;</span> -->
+                    <!-- <button class="border-button">Images</button> -->
+                    <!-- <button class="border-button">Open</button> -->
+                    <!-- <button class="border-button">Print</button> -->
+                    <!-- <button class="border-button">Find</button> -->
+                    <!-- <span>&NonBreakingSpace;</span> -->
+                    <!-- <span>&NonBreakingSpace;</span> -->
+                    <!-- <button class="border-button">Stop</button> -->
+                </div>
+                <!-- Netscape Logo -->
+                <div>
+                    <button class="logo-button" onclick="javascript:window.location.href = 'https://en.wikipedia.org/wiki/Netscape';" title="Learn more about Netscape!">
+                        <img src="img/nscape/nscape_small.png" alt="Netscape Logo">
+                    </button>
+                </div>
+            </div>
+            <!-- <input class="address-bar" placeholder="https://www.example.com/"> -->
+            <div id="addressbar" class="address-bar">
+                www.neoscape.com/
+            </div>
+        </nav>
+
+        <main class="content-wrapper">
+            <!-- Looks like it works decently without JS as well -->
+            <!-- <noscript>
+                <div style="width: 100%; height: 100%; padding: 1em; margin: 0;">
+                    <h1>This isn't gonna work :(</h1>
+                    <strong>This browser emulator relies on Javascript, please enable it for the intended experience.</strong>
+                    <p>There's no 3rd party scripts, I promise :)</p>
+                </div>
+            </noscript> -->
+
+            <!-- The webpage content view -->
+            <div id="viewport" class="website-content">
+                <iframe id="web-iframe" src="landing.html"></iframe>
+            </div>
+
+        </main>
+
+        <footer class="status-bar">
+            <span class="status-item" style="max-width: fit-content;">
+                <img id="iconfield" src="img/nscape/bmp.ico" alt="Current page favicon" style="max-height: 16px;">
+            </span>
+            <span class="status-item" style="max-width: fit-content;"><span class="titlefield">Website Name</span></span>
+            <span class="status-item"> Document: Done </span>
+            <span class="status-item" id="clock"></span>
+        </footer>
+    </div>
+
+    <script>
+        // Clock widget
+        function updateClock() {
+            const now = new Date();
+            const options = {
+                // hour12: true,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            const timeString = now.toLocaleTimeString('en-US', options);
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+    <script>
+        // Selecting the iframe and the title IDs
+        var webFrame = document.getElementById("web-iframe");
+        // var viewport = document.getElementById("viewport");
+        var titleFields = document.getElementsByClassName("titlefield");
+        var addressField = document.getElementById("addressbar");
+        var iconField = document.getElementById("iconfield");
+
+        function updateFrameHeight() {
+            // Dirty hack to get iframes to fit the container:
+            // set the height of the iframe as the height of the viewport
+            
+            // webFrame.style.height = webFrame.contentWindow.document.body.scrollHeight + 'px';
+            // webFrame.style.width = webFrame.contentWindow.document.body.scrollWidth + 'px';
+            // webFrame.style.height = viewport.offsetHeight + 'px';
+            // webFrame.style.width = viewport.scrollWidth + 'px';
+            webFrame.style.height = webFrame.contentWindow.document.documentElement.scrollHeight + 'px';
+            webFrame.style.width = webFrame.contentWindow.document.body.scrollWidth + 'px';
+        }
+
+        function updateTitleFields() {
+            // Sets the title IDs to the <iframe> content's document/article title
+            for (var i = 0; i < titleFields.length; i++) {
+                titleFields[i].innerHTML = webFrame.contentWindow.document.title;
+            }
+        }
+
+        function updateURL() {
+            // Set the address bar to the current URL of iframe
+            addressField.innerHTML = webFrame.contentWindow.location.href;
+        }
+
+        function updateFavicon() {
+            // Set the bottom-right browser icon to the displayed page's favicon - Catch if i forget to add a favicon lol
+            try {
+                iconField.src = webFrame.contentWindow.document.querySelector("link[rel~='icon']").href;
+            } catch (TypeError) {
+                //iconField.src = document.querySelector("link[rel~='icon']").href
+            }
+        }
+
+        webFrame.onload = function() {
+            // Run the functions in order of UX importance
+            updateFrameHeight();
+            updateTitleFields();
+            updateURL();
+            updateFavicon();
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>

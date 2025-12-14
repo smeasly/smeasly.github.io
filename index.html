@@ -1,18 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hunter's Sample Page</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
-  </head>
 
-  <body>
-    <h1>Hunter's Page</h1>
-    <hr>
-    <h3>Under Construction!</h3>
-    <p>This page is currently under construction. Please check back later!</p>
-    <img src="img/undconst.gif" alt="Under Construction" style="height: 200px;" />
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter's History of The Web</title>
+    <!-- Random tailwinds cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 1em 1em 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 2rem;
+        }
+        @media (max-width: 850px) {
+            aside {
+                display: none;
+            }
+            #main {
+                column-gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="top-0 w-full">
+        <h1 class="font-display text-5xl font-bold tracking-tighter text-blue-600 sm:text-7xl">Hunter's Page</h1>
+        <nav class="container mx-auto px-6 py-3 bg-white w-full shadow-md top-0 bg-white rounded-md">
+            <div class="flex items-center mx-auto justify-between md:flex-row sm:flex-col">
+                <a href="#" class="text-xl font-bold text-gray-800"><em>What's on this webzone?</em></a>
+                <div class="flex justify-evenly gap-5 flex-grow">
+                    <button onclick="window.location.href='#about';" class="bg-blue-500 text-white px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:shadow-lg hover:shadow-indigo-500/50">About</button>
+                    <button onclick="window.location.href='#history';" class="bg-blue-500 text-white px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:shadow-lg hover:shadow-indigo-500/50">History</button>
+                    <button onclick="window.location.href='#pages';" class="bg-blue-500 text-white px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:shadow-lg hover:shadow-indigo-500/50">Page Index</button>
+                    <button onclick="window.location.href='#retro';" class="bg-blue-500 text-white px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:shadow-lg hover:shadow-indigo-500/50">Neoscape</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main" class="flex container mx-auto gap-2">
+        <!-- Sidebar -->
+        <aside class="flex-grow flex-auto top-0 bg-white mx-0 my-3 px-6 py-3 rounded-md shadow-md">
+            <h3 id="quick" class="font-display font-bold mb-4">Quick Links</h3>
+            <ul class="flex flex-col justify-around gap-4">
+                <li class="mt4">
+                    <a href="nscape.html">
+                        <div class="px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:text-white hover:shadow-lg hover:shadow-indigo-500/50">
+                            The Neoscape Browser
+                        </div>
+                    </a>
+                </li>
+                <li><hr></li>
+                <li class="mt4">
+                    <a href="landing.html">
+                        <div class="px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:text-white hover:shadow-lg hover:shadow-indigo-500/50">
+                            Neoscape Landing Page
+                        </div>
+                    </a>
+                </li>
+                <li><hr></li>
+                <li class="mt4">
+                    <a href="geo.html">
+                        <div class="px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:text-white hover:shadow-lg hover:shadow-indigo-500/50">
+                            The Quake Zone
+                        </div>
+                    </a>
+                </li>
+                <li><hr></li>
+                <li class="mt4">
+                    <a href="early.html">
+                        <div class="px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:text-white hover:shadow-lg hover:shadow-indigo-500/50">
+                            Early Corporate Design
+                        </div>
+                    </a>
+                </li>
+                <li><hr></li>
+                <li class="mt4">
+                    <a href="#">
+                        <div class="px-4 py-2 rounded-md transition delay-50 duration-300 ease-in-out hover:bg-indigo-500 active:bg-blue-700 hover:text-white hover:shadow-lg hover:shadow-indigo-500/50">
+                            Attributions
+                        </div>
+                    </a>
+                </li>
+                <li><hr></li>
+                <li class="mt-4">
+                    <a href="#">Other</a>
+                </li>
+            </ul>
+        </aside>
+        <span></span>
+        <!-- Content -->
+        <main class="flex container md:flex-row sm:flex-col flex-wrap mx-0 my-0 py-3 gap-4">
+
+            <section class="flex container flex-col flex-none w-full">
+                <h2 class="text-2xl pb-3"><i>Thanks for dropping by...</i></h2>
+                <div class="flex md:flex-row sm:flex-col bg-white px-6 py-3 rounded-md shadow-md">
+
+                        <div class="flex flex-col self-start size-14 grow-6">
+                            <h4 id="about" class="text-lg grow m-3">What you'll find here</h4>
+                            <hr>
+                            <ul class="list-disc m-4 text-left">
+                                <li>Emulations of old/classic design</li>
+                                <li>Experiments with design</li>
+                                <li>Animated .gifs</li>
+                            </ul>
+                        </div>
+                        <div class="flex mx-auto flex-col size-14 grow">
+                            <h4 class="text-lg grow m-3">What does this all mean?</h4>
+                            <hr class="mb-2">
+                            <div class="text-left">
+                                <p>I love old and obsolete design, especially the 'folk' design of ameteurs web-designers.</p>
+                                <p>This could really mean <i>anything</i>...</p>
+                                <p>Need I say more?</p>
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <div class="flex gap-4 container" >                
+                <section class="bg-white rounded-md shadow-md px-6 py-3 w-full max-w-1/4">
+                    <h2 id="history" class="text-xl pb-3">History of Web Design</h2>
+                    <hr>
+                    <div class="flex px-6 py-3">
+                        <p class="align-center self-center text-left indent-8 text-wrap">
+                            I'm not a web-designer, nor do I intend to become one, but I do have an appreciation for
+                            the design trends of yesteryear. 
+                            <br><br>
+                            I have made a very incomplete and perhaps very inaccurate
+                            tour through the 'history' of web design by creating my own interpretations of different eras
+                            of design. In fact, this page is my take on the <i>modern</i> design that we see today.
+                            <br><br>
+                            In honesty, I'm not too passionate about it and I think this shows. The old stuff on the other hand?
+                            Can't get enough.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-md shadow-md px-6 py-3 min-w-1/2">
+                    <h2 id="pages" class="text-xl pb-3">Page Index</h2>
+                    <hr>
+
+                    <div class="flex md:flex-row sm:flex-col px-6 py-3 gap-4 justify-around">
+                        <div class="flex align-center flex-auto">
+                            <blockquote class="self-center text-left indent-8 text-wrap">
+                                Here's a list of the current pages on this webzone. It's not a lot, <br>
+                                but I hope to expand it later. <br>
+                                Most of these are also accessible
+                                in the <i><a href="#quick">Quick Links</a></i> sidebar.
+                            </blockquote>
+                            <!-- <img src="img/undconst.gif" alt="Under Construction" style="height: 100px;"> -->
+                        </div>
+                        <div class="flex-auto">
+                            <ol class="space-y-2 mt-2">
+                                <li class="text-wrap">
+                                    <p><i>Neoscape</i></p>
+                                    <p class="text-left"><small>
+                                        An emulation of the classic Netscape browser in HTML, CSS, and Javascript. 
+                                        Made to make viewing the following sites more <i>thematic</i>.
+                                    </small></p>
+                                </li>
+                                <li><hr></li>
+                                <li class="text-wrap">
+                                    <p><i>GeoTowns</i></p>
+                                    <p class="text-left"><small>
+                                        The early 90's and onwards &ndash; Personal sites lost to time.
+                                    </small></p>
+                                </li>
+                                <li><hr></li>                    
+                                <li class="text-wrap">
+                                    <p><i>Early Modern Design</i></p>
+                                    <p class="text-left"><small>
+                                        The early-to-mid 2000's &ndash; When the corporate world realised the internet was the future.
+                                    </small></p>
+                                </li>
+                                <li><hr></li>                    
+                                <li class="text-wrap">
+                                    <p><i>Index</i></p>
+                                    <p class="text-left"><small>
+                                        Hey, you're here! &ndash; Our main jumping-off point.
+                                    </small></p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="flex container md:flex-row sm:flex-col flex-none flex-nowrap w-full bg-white px-6 py-3 rounded-md shadow-md gap-4">
+                <div class="flex flex-auto flex-col">
+                    <h2 id="retro" class="text-2xl pb-3">Neoscape</h2>
+                    <hr>
+                    <div class="flex md:flex-row sm:flex-col justify-around gap-4" >
+                        <p>
+                            This is the emulated browser! It's not much of an emulation but it is somewhat functional.<br>
+                            This is built in CSS, HTML, and uses very minimal Javascript. You can navigate around like it's 1999!<br>
+                            <small>( As long as it's a page somewhere within this domain... )</small>
+                        </p>
+                        <p class="self-center">I recommend turning on <b>fullscreen</b> for better effect! :).</p>
+                    </div>
+                </div>
+                <div class="self-end self-center">
+                    <a href="nscape.html" title=""><img class="h-full max-h-32 rounded-md shadow-md" src="img/nscape/nscape_logo.png" alt="Neoscape"></a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="flex container mx-auto flex-col gap-4">
+            <section class="flex container flex-col flex-none w-full">
+                <div class="flex flex-col bg-white px-6 py-3 rounded-md shadow-md">
+                    <h2 class="text-xl">Attributions</h2>
+                    <hr>
+                    <div class="flex md:flex-row sm:flex-col gap-4 w-full max-w-1/2">
+                        <div class="flex-auto w-50 shrink">
+                            <p class="text-wrap">
+                                As I'm very much a novice, I would not have been able to create any of these pages without using outside 
+                                resources. There's a lot of boilerplate, images, and snippets that I've collected over the years and either 
+                                lost or neglected to record the source. However, I've tried to record the most <i>significant</i> resources 
+                                that I found while creating this.
+                            </p>
+                        </div>
+
+                        <div class="flex-auto w-full max-w-1/2">
+                            <details class="cursor-pointer">
+                            <summary>Attributions</summary>
+                                <ul>
+                                    <li>
+                                        <a href="https://archive.org/details/github.com-grassmunk-Chicago95_Extras_-_2021-02-23_17-07-06">Icons</a> from <a href="https://github.com/grassmunk/Chicago95/tree/master">The Chigago95 XFCE spin</a>
+                                    </li>
+                                    <li>
+                                        A good deal of the <em>Neoscape</em> UI from <a href="https://gist.github.com/opaeoh/5fcdadb5bb2f701c7a5a94d79f97f856">netscape.html - A simple netscape UI in HTML</a> by <a href="https://github.com/opaeoh">opaeoh</a>
+                                    </li>                           
+                                    <li></li>                            
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.cameronsworld.net">www.cameronsworld.net</a> - A love letter to GeoCities
+                                    </li>
+                                    <li></li>                            
+                                    <li></li>                            
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="flex flex-row gap-4">
+            <section class="mx-auto py-3 px-6 flex-auto bg-white rounded-md shadow-md">
+                <h2 class="text-lg">Contact</h2>
+                <hr>
+                <p>Drop me a line at <a href="#">[email protected]</a>!</p>
+            </section>
+            <section class="mx-auto py-3 flex-auto bg-white rounded-md shadow-md">
+                <h2 class="text-lg">Other</h2>
+                <hr>
+                <p>Other</p>
+            </section>
+        </div>
+        <div class="mx-auto w-full flex-grow mt-4 py-3 px-6 bg-white rounded-md shadow-md">
+            <p><small>Hunter M, <span id="year"></span></small></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
 </html>

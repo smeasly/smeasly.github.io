@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Neoscape Navigator</title>
+	<link rel="icon" type="image/png" href="img/nscape/nscape_logo_small.png">
+    <style>
+		:root {
+			/* <!-- Custom Cursors --> */
+			--cursor-pointer: url(img/nscape/pointer.cur), pointer;
+		}
+        body {
+            background: #c0c0c0;
+			padding: 1em;
+        }
+		hr {
+			border: 2px inset #dddddd;
+			height: 2px;
+			border-radius: 2px;
+		}
+		a:hover {
+			color: #008ada;
+			cursor: var(--cursor-pointer);
+		}
+		a:visited {
+			color: #8e61ff;
+		}		
+		/* Flex Layout */
+		article.flex-grid {
+			display: flex;
+			flex-direction: column;
+			flex: 1 0;
+			justify-content: space-evenly;
+		}
+		section.flex-grid {
+			display: flex;
+			flex-direction: row;
+		}
+		div.flex-grid {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+		.flex-item {
+			margin: 0 0.25em 0;
+			padding: 5px 0.5em 5px;
+			flex: 1 1;
+		}
+		aside.flex-item {
+			align-self: center;
+			justify-self: flex-start;
+			justify-content: center;
+			align-content: center;
+			flex: 0 1;
+			min-width: 175px;
+			width: 15vw;
+		}
+		div.flex-item>p {
+			margin: 0 auto 0;
+		}
+		/* Other */
+		.center {
+			align-self: center;
+			justify-self: center;
+			text-align: center;
+		}
+
+		.left {
+			align-self: flex-start;
+			justify-self: left;
+			text-align: left;
+		}
+
+		.declare {
+			text-align: justify;
+  			text-justify: inter-word;
+		}
+
+		@media (max-width: 850px) {
+			* {
+				line-height: normal;
+			}
+
+			aside {
+				display: none;
+			}
+
+			article.flex-grid,
+			section.flex-grid,
+			div.flex-grid {
+				flex-flow: column wrap;
+			}
+		}
+        
+    </style>
+
+</head>
+<body>
+	<header>
+		<section class="flex-grid">
+
+			<aside class="flex-item">
+				<img src="img/nscape/nscape_logo.png" alt="Netscape Logo" class="center" style="max-height: 175px;">
+			</aside>
+
+			<article class="flex-grid">
+				<div class="flex-item center" style="line-height: 0.5;">
+					<div style="line-height: 0;">
+						<h1 style="font-size: 2em;">
+							<b>Neoscape Navigator</b> <sup><small>(TM)</small></sup>
+						</h1>
+						<h2>Version 2.02</h2>
+					</div>
+					<p style="font-size: larger;">Copyright &copy; 1995-1999 Neoscape Communication Corporation, All rights reserved.</p>
+				</div>
+				<nav class="flex-item left">
+					<p class="center" style="line-height: 0;">Welcome to Neoscape Navigator!</p>
+					<p>For information about usage, see the <b><a href="#help">How to use your Neoscape Navigator</a></b> section.</p>
+					<p>To get started, check out the <b><a href="#pages">Hot Pages</a>!</b></p>
+					<p>
+						To learn more about this software, read the <b><a href="#about">About</a></b> section, or 
+						click the <b>Neoscape</b> logo at the right side of the <b>Ribbon Bar</b>.
+					</p>
+					<small>This software is subject to absolutely nothing, as set forth in the non-existent agreement.</small>					
+				</nav>
+			</article>
+
+		</section>
+	</header>
+	<hr>
+	<main>
+
+		<section class="flex-grid">
+			<aside class="flex-item">
+				<img src="img/nscape/jvs2.png" alt="Java Logo" class="center" style="max-height: 128px;">
+			</aside>
+
+			<article class="flex-grid">
+				<p>
+					Contains Java&trade; software, developed by Sun Microsystems, Inc.<br>
+					Copyright &copy; 1995-1999 Sun Microsystems, Inc. All Rights Reserved.
+				</p>
+			</article>
+		</section>
+		<hr>
+
+		<section class="flex-grid">
+			<aside class="flex-item">
+				<img src="img/nscape/qm.gif" alt="Help section" class="center">
+			</aside>
+
+			<article class="flex-grid">
+				<div class="flex-item">
+					<h3 id="help">How to use your Neoscape Navigator</h3>
+					<p>
+						The main controls are in the <b>Ribbon Bar</b>,
+						just above the address bar, and the <b>Window Controls</b>,
+						at the top right of your screen.
+					</p>
+				</div>
+				<div class="flex-grid">
+					<div class="flex-item">
+						<p style="text-align: center;">
+							<b>Navigation</b>
+						</p>
+						<p>
+							The <b>Back</b> button will return you to the page you just jumped from,<br>
+							and the <b>Forward</b> button will take you to the page you last returned from.
+						</p>
+					</div>
+					<div class="flex-item">
+						<p style="text-align: center;">
+							<b>Reload</b>
+						</p>
+						<p>
+							If the page is not loading properly, use this to <em>refresh</em> the current page.
+						</p>
+					</div>
+					<div class="flex-item">
+						<p style="text-align: center;">
+							<b>Home</b>
+						</p>
+						<p>
+							This will take you back to the future, should you really wish to return.
+						</p>
+					</div>
+					<div class="flex-item">
+						<p style="text-align: center;">
+							<b>Window Buttons</b> (<small>&#x1F5D5; &#x1F5D7; &#x1F5D9;</small>)
+						</p>
+						<p>
+							In the top right corner, clicking any of these will let you view the page in a <em>modern browser</em>.<br>
+							<small>(<b>This may be necessary to view linked external pages!</b>)</small>
+						</p>
+					</div>
+					
+				</div>
+			</article>
+		</section>
+		<hr>
+
+		<section class="flex-grid">
+			<aside class="flex-item">
+				<img src="img/nscape/new.gif" alt="New Pages" class="center" style="height: 75px;">
+			</aside>
+
+			<article class="flex-grid">
+				<div class="flex-item" style="line-height: 0.5;">
+					<h4 id="pages">Get Started with <b>Hot Pages</b></h4>
+					<em>See what's hot on the web!</em>
+				</div>
+				<ul class="flex-item">
+					<li>
+						<a href="geo.html" title="Visit a netizen's home-page">GeoTowns</a><br>
+						Check out fansites, blogs, informationals and more, written by netizens like you!
+					</li>
+					<li>
+						<a href="early.html" title="Check out the latest products">Sonasonic MP400-C MPEG Camcorder</a><br>
+						Take a look at the latest products.
+					</li>
+				</ul>
+			</article>
+		</section>
+
+	</main>
+	<hr>
+	<footer>
+		<article class="declare">
+			<h4 id="about" style="line-height: 0.5;">
+				About Neoscape Navigator
+			</h4>
+			<p>
+				This is a crude emulation of the original Netscape Navigator by Mozilla, a very popular web-browser that was eventually discontinued
+				due to becoming economically infeasible to continue development. Netscape was originally paid software, but when Microsoft started
+				bundling Internet Explorer with copies of windows, it ended up completely undercutting Netscape's market share.
+			</p>
+			<p>
+				Most of this UI was based off of <a href="https://gist.github.com/opaeoh/5fcdadb5bb2f701c7a5a94d79f97f856">netscape.html - A simple netscape UI in HTML</a> by <a href="https://github.com/opaeoh">opaeoh</a>. 
+				Though I made many modifications, especially in making the UI somewhat functional.
+			</p>
+		</article>
+		<div class="center">
+			<p>
+				<small class="center">Your product registration number: <span id="prodnum"></span></small>
+			</p>
+			<a href="https://rn10950.github.io/RetroZillaWeb/" title="Upgrade Today!">
+				<img src="img/nscape/netscape.gif" alt="Netscape 3.0 - Link to Retrozilla retro browser.">
+			</a>
+		</div>
+
+	</footer>
+	<script>
+		document.getElementById('prodnum').textContent = Math.round(Math.random() * 100000);
+	</script>
+</body>
+</html>

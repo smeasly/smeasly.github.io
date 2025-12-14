@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>The Quake Zone</title>
+    <link rel="stylesheet" href="static/style_geo.css" >
+    <link rel="icon" type="image/png" href="img/geo/quake_icon.png" >
+    <style>
+        body {
+            background: url("img/geo/bg/starfield.gif");
+        }
+
+        header {
+            background-image: url("img/geo/quake_banner_long.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 175px;
+        }
+
+        header>table {
+            min-height: 50px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            min-height: 30px;
+            margin: 0px;
+            padding: 15px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+        nav span {
+            align-self: center;
+            width: 10em;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        section {
+            margin: 0.5em;
+            padding: 2em;
+        }
+
+        hr {
+            height: 2px;
+            border: 0;
+            border-top: 1px solid #700000;
+            margin: 1em 0;
+            padding: 0;     
+        }
+
+        .inner-table {
+            border: 0px;
+            margin: 25px;
+        }
+        /* Media Queries */
+        @media screen and (min-width: 500px) and (max-width: 900px) {
+            header {
+                background-image: url("../img/geo/quake_banner_short.png");
+            }
+            aside {
+                display: none;
+            }
+            section {
+                margin: 0;
+                padding: 0.25em;
+            }
+            .inner-table {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+            header {
+                background-image: none;
+            }
+            aside {
+                display: none;
+            }
+            section {
+                margin: 0;
+                padding: 0;
+            }
+            nav span {
+                width: fit-content;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <table class="center">
+            <tr>
+                <td><img src="img/geo/quakeworld.gif" alt="QUAKE" style="max-height: 100px;"></td>
+                <td><h1 id="#" class="center" style="font-family: fantasy; font-size: 3em; text-shadow: 3px 3px 3px#700000">The QUAKE Zone</h1></td>
+                <td><img src="img/geo/quakeworld.gif" alt="QUAKE" style="max-height: 100px"></td>
+            </tr>
+        </table>
+        <nav class="center-content">
+            <span><a href="landing.html"><img src="img/geo/home1.png" alt="Home" class="center"></a></span>
+            <span><a href="#links"><img src="img/geo/links1.png" alt="Links" class="center"></a></span>
+            <span><a href="#quake"><img src="img/geo/quake_icon.png" alt="Quake" class="center" style="max-height: 48px;"></a></span>
+            <span><a href="#webring"><img src="img/geo/webring1.png" alt="Webring" class="center"></a></span>
+            <span><a href="#about"><img  src="img/geo/about1.png" alt="About" class="center"></a></span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid-wrapper">
+            <div class="center full">
+                <h2 id="quake" class="full">Welcome to the QUAKE Zone!</h2>
+                <img class="center full" src="img/geo/line.gif" alt="fancy line">
+            </div>
+            <h3 class="full">Under Construction!</h3>
+            <aside class="center">
+                <img src="img/undconst.gif" alt="Under Construction" style="height: 200px;">
+            </aside>
+            <div>
+                <hr>
+                <p>Hi, thanks for checking out my webzone!</p>
+                <p>This page is currently under construction. Please check back later!</p>
+                <hr>
+            </div>
+            <aside class="center">
+                <img src="img/undconst.gif" alt="Under Construction" style="height: 200px;">
+            </aside>
+        </section>
+
+        <!-- Links Section -->
+        <section class="grid-wrapper">
+            <div class="center full">
+                <table class="center">
+                    <tr>
+                        <td><img src="img/geo/chain.gif" alt="Links"></td>
+                        <td><h2 id="links"> Links </h2></td>
+                        <td><img src="img/geo/chain.gif" alt="Links"> </td>
+                    </tr>
+                </table>
+                <img src="img/geo/line.gif" alt="fancy line">
+            </div>
+
+            <aside class="center">
+                <a href="http://joequake.runecentral.com/news.html" title="JoeQuake">
+                    <img src="img/geo/optimize.gif" alt="An advertisement for Quake modification software">
+                </a>
+            </aside>
+
+            <table class="inner-table center" style="width: 80%;">
+                <tr>
+                    <td>
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; font-size: 1rem;">
+                            <a href="https://quakeone.com">quakeone.com</a> - The most popular QUAKE forum!<br>
+                            <br>
+                            <a href="">A</a> - AAA <br>
+                            <br>
+                            <a href="http://facelift.quakedev.com/">facelift.quakedev.com</a> - the Quake Revitalization
+                            project page<br>
+                            <br>
+                            <a href="http://qmb.quakepit.com">qmb.quakepit.com</a> - the QMB Project Page<br>
+                            <br>
+                            <a href="https://quake.speeddemosarchive.com/quake/">quake.speeddemosarchive.com/quake/</a> - Another way to play QUAKE<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr>
+                    </td>
+                </tr>
+            </table>
+
+            <aside style="text-align: center;" class="center">
+                <p>This WebZone is brought to you by:</p>
+                <a href="https://geocities.restorativland.org" title="The Best of GeoCities">
+                    <img src="img/geo/ygc.gif" alt="Geocities Banner">
+                </a>
+                <p><em>What was <a href="https://en.wikipedia.org/wiki/GeoCities">GeoCities?</a></em></p>
+            </aside>
+
+            <div class="center full">
+                <a href="https://www.gog.com/en/game/quake_the_offering" title="Get QUAKE for PC on GOG.COM!">
+                    <img class="center" src="img/geo/getquake.gif" alt="Advertisement for the original Quake">
+                </a>
+            </div>
+        </section>
+
+        <!-- Webrings -->
+        <section class="grid-wrapper">
+            <div class="center full">
+                <h2 id="webring">Join My Webring!</h2>
+                <img src="img/geo/line.gif" alt="fancy line">
+            </div>
+            <div class="full">
+                <img class="center" src="img/geo/webring2.gif" alt="Webrings">
+                <p>Like what you see? Link to my page!</p>
+            </div>
+
+            <div style="justify-self: right; align-self: center;">
+                <a href="" title=""><img src="img/geo/back2.gif" alt="Last"></a>
+            </div>
+
+            <div class="center" style="padding: 10px; min-height: 10em">
+                <hr>
+                <h3>What's a <em>Webring?</em></h3>
+                <p>
+                    A <a href="https://en.wikipedia.org/wiki/Webring">webring</a> was a simple way for communities online to share each other's work.
+                    Before the age of shares and likes, people would link to eachothers websites &mdash; Not only would they link to each
+                    other, they would organise the linking in such a way that each person in the webring would link
+                    to a unique member. This way, nobody was left out!<br><br>
+                    The organiser of a webring was called a <em>'ringmaster'</em>, but webrings were often organised <br>
+                    using an external webring provider services, which would allow you to embed a widget into your page.<br>
+                    <br>
+                    I've linked a couple of my compatriots to simulate the experience :) Try clicking 'Back' or 'Next'!
+                </p>
+                <hr>
+            </div>
+
+            <div style="justify-self: left; align-self: center;">
+                <a href="" title=""><img src="img/geo/next2.gif" alt="Next"></a>
+            </div>
+            <!-- Guestbooks -->
+            <div class="full">
+                <a class="center" style="text-decoration: none;" href="https://bravenet.com" title="Bravenet Guestbooks - Would they still offer such a service?">
+                    <img src="img/geo/gb1.gif" alt="Bravenet Guestbooks">
+                    <img src="img/geo/gb2.gif" alt="Bravenet Guestbooks">
+                </a>
+            </div>
+        </section>
+        <!-- Banners -->
+        <section class="center-content">
+            <div class="center full">
+                <h2 id="banners">My Banners</h2>
+                <img src="img/geo/line.gif" alt="fancy line">
+            </div>
+            <br><br>
+            <div>
+                <img src="img/geo/wc01.gif" alt="The kitcshiness of a web-counter.">
+                <p style="align-self: center;"> Congratulations! You're the <img src="img/geo/wc02.gif" alt="Fake hit-counter">th visitor!</p>
+            </div>
+        
+            <!-- Some extra image ephemera -->
+            <div>
+                <a href="https://geocity.ichi.city" title="Yahoo Geocities"><img src="img/geo/gc2.gif" alt="Yahoo GeoCities"></a>
+                <a href="https://www.youtube.com/watch?v=Xm5OiB3CPxg" title="Is your system Y2K-Ready?"><img src="img/geo/y2k.gif" alt="The year 2000"></a>
+                <a href="https://winamparchive.org" title="You ever heard of MP3s?"><img src="img/geo/winamp.gif" alt="Winamp"></a>
+                <a href="https://www.canada.ca/en.html" title="The greatest place to live."><img src="img/geo/proud.jpg" alt="Canadian Made" style="max-height: 31px"></a>
+                <a href="https://validator.w3.org" title="Are you verified? Get verified today!"><img src="img/geo/vcss.png" alt="W3C Verified"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="center">
+            <hr>
+            <p class="center" style="font-size: small;">Page last updated: 1999</p>
+            <hr>
+        </div>
+        <section class="info-section">
+            <h2 id="about" class="center"><em>The Personal Fan-Page</em></h2>
+            <p>
+                &ThickSpace;&ThickSpace;Many pages on the early internet were like this one, they were quite<br>
+                static affairs. HTML and its standards at the time was different<br>
+                and much simpler, but this simplicity was approachable for the millions of people coming <br>
+                online through the late 90's and early 00's.<br>
+                <br>
+                &ThickSpace;&ThickSpace;What they lacked in interactivity and function, they more than made up for in<br>
+                personality. These websites with garish colours and animated gifs were, for many,<br>
+                what the internet was. GeoCities facilitated this earnestness by providing a <br>
+                platform for people to do whatever they want with web-design and explore their<br>
+                interests. This level of cusomisation feels much more personal than what online<br>
+                social interaction has become today.<br>
+                <br>
+                &ThickSpace;&ThickSpace;Though I only caught the tail end of it personally, browsing through<br>
+                long-abandoned GeoCities pages and personal websites gives me a much more<br>
+                full understanding of what the creator was all about than any social-media<br>
+                page ever has.<br>
+                <br>
+                When GeoCities was discontinued in 2009, something special was certainly lost.
+            </p>
+        </section>
+    </footer>
+
+</body>
+
+</html>
