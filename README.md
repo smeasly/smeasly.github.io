@@ -1,6 +1,5 @@
-# smeasly.github.io
-
-[## A (semi) interactive (and incomplete) history of web design!](https://smeasly.github.io)
+# [smeasly.github.io](https://smeasly.github.io)
+A (semi) interactive (and incomplete) history of web design!
 
 ## About This Project
 This project was originally an assignment for an IT diploma program - How does this fit into IT? Well, because it's fun.
@@ -9,15 +8,15 @@ I want to expand this as a personal side project for fun, and hopefully find a b
 This may also become a sub-set of an expanded pages project once I have the need to showcase information for other repositories.
 
 ## Pages
- - **Main Index**
+ - **Main Index**: 
  Modern, flat web design - My approximation of what we see today
- - **Neoscape Navigator**
+ - **Neoscape Navigator**: 
  Your portal into the past
- - **Geoscape**
+ - **Geoscape**: 
  The kitschy design of the 90s to the early 2000s
- - **Two-Point-Oh**
+ - **Two-Point-Oh**: 
  The early attempts at *sleek and future-forward* design
- - **The Future...**
+ - **The Future...**: 
  A taste of what the *terrifying* future may hold
 
 ## Attributions, Inspiration, and Sources
